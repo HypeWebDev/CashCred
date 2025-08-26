@@ -23,7 +23,7 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-color);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* **CORREÇÃO APLICADA AQUI** */
 }
 
 .container {
@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3rem; /* ajustado para menor no desktop */
+    font-size: 3rem;
     line-height: 1.2;
     color: var(--text-color);
     word-wrap: break-word;
@@ -216,7 +216,7 @@ h2::after {
     flex: 1;
     min-width: 300px;
     z-index: 2;
-    text-align: center; /* centralizei para mobile ficar mais limpo */
+    text-align: center;
 }
 
 .hero-text-and-button h1 {
@@ -450,7 +450,7 @@ h2::after {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -459,12 +459,14 @@ h2::after {
         left: 0;
         background-color: var(--bg-dark);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        animation: slideDown 0.5s ease-out;
         z-index: 999;
+        transform: translateX(100%); /* **CORREÇÃO APLICADA AQUI** */
+        transition: transform 0.5s ease-in-out; /* **CORREÇÃO APLICADA AQUI** */
     }
 
     .nav-links.active {
         display: flex;
+        transform: translateX(0); /* **CORREÇÃO APLICADA AQUI** */
     }
 
     .nav-links li {
@@ -484,7 +486,7 @@ h2::after {
     }
 
     .logo img {
-        height: 55px; 
+        height: 55px; /* **CORREÇÃO APLICADA AQUI** */
     }
 
     .hero-section {
@@ -498,17 +500,6 @@ h2::after {
 
     .hero-text-and-button .subtitle {
         font-size: 1.1rem;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -557,7 +548,7 @@ h2::after {
     }
     
     .hero-text-and-button h1 {
-        font-size: 1.6rem; /* igual ao seu outro site */
+        font-size: 1.6rem;
         line-height: 1.4;
     }
 
