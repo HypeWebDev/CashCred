@@ -23,8 +23,22 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-color);
     line-height: 1.6;
-    overflow-x: hidden; /* **CORREÇÃO APLICADA AQUI** */
+    overflow-x: hidden;
 }
+
+/* **CORREÇÕES DAS ANIMAÇÕES - RESOLVE O PROBLEMA DE ROLAGEM** */
+.animate__animated {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.animate__fadeInUp, .animate__zoomIn {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+/* FIM DAS CORREÇÕES DAS ANIMAÇÕES */
 
 .container {
     max-width: 1200px;
@@ -460,13 +474,13 @@ h2::after {
         background-color: var(--bg-dark);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
-        transform: translateX(100%); /* **CORREÇÃO APLICADA AQUI** */
-        transition: transform 0.5s ease-in-out; /* **CORREÇÃO APLICADA AQUI** */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
     }
 
     .nav-links.active {
         display: flex;
-        transform: translateX(0); /* **CORREÇÃO APLICADA AQUI** */
+        transform: translateX(0);
     }
 
     .nav-links li {
@@ -486,7 +500,7 @@ h2::after {
     }
 
     .logo img {
-        height: 55px; /* **CORREÇÃO APLICADA AQUI** */
+        height: 55px;
     }
 
     .hero-section {
