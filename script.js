@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer para animações
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -11,12 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, {
+        threshold: 0.1
+    });
 
     const animatedElements = document.querySelectorAll('.animate__animated');
     animatedElements.forEach(el => observer.observe(el));
 
-    // Header sticky
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Inicialização ÚNICA do Swiper para a seção de depoimentos
-    const swiperTestimonials = new Swiper('.testimonial-slider', {
+    const swiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
             delay: 5000,
@@ -37,11 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.swiper-pagination',
             clickable: true,
         },
-        slidesPerView: 1, // Padrão de 1 slide por vez
-        spaceBetween: 30,
         effect: 'slide',
+        spaceBetween: 30,
         breakpoints: {
-            // Configurações para telas maiores
+            320: {
+                slidesPerView: 1,
+            },
             768: {
                 slidesPerView: 2,
             },
@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // FAQ toggle
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Fechar menu mobile ao clicar em link
+    // Close mobile menu when a link is clicked
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', () => {

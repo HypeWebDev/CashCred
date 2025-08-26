@@ -439,7 +439,7 @@ h2::after {
     opacity: 0.7;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .menu-toggle {
         display: flex;
     }
@@ -507,7 +507,7 @@ h2::after {
 }
 
 @media (max-width: 768px) {
-     h1 {
+    h1 {
         font-size: 2.2rem;
     }
 
@@ -537,29 +537,6 @@ h2::after {
 
     .hero-text-and-button .subtitle {
         font-size: 1rem;
-    }
-
-    .hero-content-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .hero-text-and-button {
-        flex: none;
-        width: 100%;
-    }
-
-    .hero-image-container {
-        flex: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-card-svg {
-        max-width: 90%;
-        transform: none; 
     }
 }
 
@@ -619,5 +596,3 @@ h2::after {
 .visible.animate__delay-0_4s { animation-delay: 0.4s; }
 .visible.animate__delay-0_6s { animation-delay: 0.6s; }
 .visible.animate__delay-0_8s { animation-delay: 0.8s; }
-
-
