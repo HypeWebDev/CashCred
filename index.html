@@ -1,208 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CashCred Empréstimos | Seu Crédito Rápido</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <!-- Meta viewport ajustado para evitar zoom e overflow indesejado -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>CashCred Empréstimos | Seu Crédito Rápido</title>
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
 </head>
 <body>
+  <header class="header">
+    <div class="container navbar-container">
+      <a href="#" class="logo"><img src="img/logo.png" alt="CashCred Empréstimos"></a>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">Como Funciona</a></li>
+        <li><a href="#advantages">Vantagens</a></li>
+        <li><a href="#testimonials">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://wa.me/558296284951" target="_blank" class="btn-contact">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <header class="header">
-        <div class="container navbar-container">
-            <a href="#" class="logo">
-                <img src="img/logo.png" alt="CashCred Empréstimos">
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#how-it-works">Como Funciona</a></li>
-                <li><a href="#advantages">Vantagens</a></li>
-                <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://wa.me/558296284951" target="_blank" class="btn-contact">Fale Conosco</a></li>
-            </ul>
+  <main>
+    <section class="hero-section">
+      <div class="container hero-content-container">
+        <div class="hero-text-and-button">
+          <h1 class="animate__animated animate__fadeInUp">Empréstimo Rápido com seu cartão de crédito</h1>
+          <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">De forma segura e sem burocracia!</p>
+          <a href="https://wa.me/558296284951" target="_blank" class="btn-main animate__animated animate__fadeInUp animate__delay-2s">Simule Agora</a>
         </div>
-    </header>
-
-    <main>
-        <section class="hero-section">
-            <div class="container hero-content-container">
-                <div class="hero-text-and-button">
-                    <h1 class="animate__animated animate__fadeInUp">Empréstimo Rápido com seu cartão de crédito</h1>
-                    <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">
-                        De forma segura e sem burocracia!
-                    </p>
-                    <a href="https://wa.me/558296284951" target="_blank" class="btn-main animate__animated animate__fadeInUp animate__delay-2s">Simule Agora</a>
-                </div>
-                <div class="hero-image-container animate__animated animate__zoomIn animate__delay-1s">
-                    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" class="hero-card-svg">
-                        <defs>
-                            <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#f1c40f;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <rect x="50" y="50" width="400" height="200" rx="25" fill="url(#cardGradient)" class="card-base"/>
-                        <rect x="70" y="70" width="360" height="30" rx="5" fill="rgba(255,255,255,0.2)" class="card-shine"/>
-                        <path d="M 120 180 C 130 190, 140 190, 150 180 S 170 170, 180 180" fill="none" stroke="#2c3e50" stroke-width="2" class="card-wave"/>
-                        <circle cx="100" cy="150" r="20" fill="#2c3e50" class="chip-circle"/>
-                        <rect x="90" y="140" width="20" height="20" fill="#2c3e50" class="chip-square"/>
-                        <text x="170" y="190" font-family="Poppins, sans-serif" font-size="20" font-weight="600" fill="#2c3e50">**** **** **** 1234</text>
-                        <text x="350" y="230" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#2c3e50">CashCred</text>
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <section id="how-it-works" class="section">
-            <div class="container">
-                <h2 class="section-title text-center">Como funciona o empréstimo no cartão de crédito?</h2>
-                <div class="steps-container">
-                    <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.2s">
-                        <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="40" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
-                            <path d="M30 40 L50 65 L70 30" fill="none" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
-                        </svg>
-                        <h3>Sem Burocracia</h3>
-                        <p>Para conseguir seu empréstimo, não é necessário ter nome limpo, apenas um cartão com limite disponível. 💳</p>
-                    </div>
-                    <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.4s">
-                        <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="40" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
-                            <path d="M 30 50 Q 50 30, 70 50 L 70 50 Z" fill="#f1c40f" transform="rotate(180, 50, 50)"/>
-                            <path d="M 30 50 Q 50 70, 70 50 L 70 50 Z" fill="#f1c40f"/>
-                            <circle cx="50" cy="50" r="10" fill="#2c3e50"/>
-                        </svg>
-                        <h3>Limite Disponível</h3>
-                        <p>Se você possui um cartão de crédito com limite disponível, é possível utilizar parte desse limite em forma de crédito contratado.</p>
-                    </div>
-                    <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.6s">
-                        <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="30" width="60" height="40" rx="10" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
-                            <path d="M50 30 L50 70 M35 50 L65 50" stroke="#f1c40f" stroke-width="4" stroke-linecap="round"/>
-                        </svg>
-                        <h3>Atendimento Personalizado</h3>
-                        <p>O valor liberado depende do limite disponível no cartão. Atendimento personalizado com um especialista. Sem taxa de adesão.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="advantages" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title text-center">Por que escolher a Cash Cred?</h2>
-                <div class="advantages-grid">
-                    <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.2s">
-                        <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        <h4>Rápido</h4>
-                        <p>O dinheiro cai na conta em poucos minutos.</p>
-                    </div>
-                    <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.4s">
-                        <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                        <h4>Seguro</h4>
-                        <p>Processo 100% seguro com garantia do seu cartão.</p>
-                    </div>
-                    <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.6s">
-                        <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                        <h4>Sem Burocracia</h4>
-                        <p>Não precisa ter nome limpo, só um cartão com limite.</p>
-                    </div>
-                    <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.8s">
-                        <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 17H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-3H2"/>
-                            <path d="M12 12V3h3a3 3 0 0 1 3 3v7.5a1.5 1.5 0 0 0 3 0V6a3 3 0 0 0-3-3h-3a3 3 0 0 0-3 3v6"/>
-                            <path d="M12 21v-9"/>
-                        </svg>
-                        <h4>Atendimento Pessoal</h4>
-                        <p>Um especialista vai até você para fechar o negócio.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section">
-            <div class="container">
-                <h2 class="section-title text-center">O que nossos clientes dizem</h2>
-                <div class="swiper-container testimonial-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide testimonial-card">
-                            <p>"Precisava de dinheiro rápido e a Cash Cred resolveu meu problema em minutos! Atendimento nota 10."</p>
-                            <span>- Maria S., Rio de Janeiro</span>
-                        </div>
-                        <div class="swiper-slide testimonial-card">
-                            <p>"Tentei em vários lugares e só aqui consegui o empréstimo sem complicação. Recomendo muito!"</p>
-                            <span>- João P., São Paulo</span>
-                        </div>
-                        <div class="swiper-slide testimonial-card">
-                            <p>"O diferencial é a segurança e a agilidade. Fui atendida em casa e o dinheiro caiu na hora."</p>
-                            <span>- Ana C., Belo Horizonte</span>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title text-center">Perguntas Frequentes</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <div class="faq-question">O que preciso para solicitar o empréstimo?</div>
-                        <div class="faq-answer">
-                            <p>Apenas um cartão de crédito com limite disponível. Não consultamos SPC/Serasa.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Qual o valor mínimo e máximo que posso solicitar?</div>
-                        <div class="faq-answer">
-                            <p>O valor liberado depende do limite disponível no seu cartão. Nosso especialista fará a melhor análise para você.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">O processo é seguro?</div>
-                        <div class="faq-answer">
-                            <p>Sim, todas as transações são feitas de forma segura e com a sua autorização. Garantimos total sigilo dos seus dados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section cta-section text-center">
-            <div class="container">
-                <h2>Pronto para conseguir seu empréstimo?</h2>
-                <p>Entre em contato agora mesmo e transforme seu limite em dinheiro na hora.</p>
-                <a href="https://wa.me/558296284951" target="_blank" class="btn-main pulse-animation">Fale com um especialista</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 CashCred Empréstimos. Todos os direitos reservados.</p>
+        <div class="hero-image-container animate__animated animate__zoomIn animate__delay-1s">
+          <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" class="hero-card-svg">
+            <defs>
+              <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#f1c40f;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect x="50" y="50" width="400" height="200" rx="25" fill="url(#cardGradient)" class="card-base"/>
+            <rect x="70" y="70" width="360" height="30" rx="5" fill="rgba(255,255,255,0.2)" class="card-shine"/>
+            <path d="M 120 180 C 130 190, 140 190, 150 180 S 170 170, 180 180" fill="none" stroke="#2c3e50" stroke-width="2" class="card-wave"/>
+            <circle cx="100" cy="150" r="20" fill="#2c3e50" class="chip-circle"/>
+            <rect x="90" y="140" width="20" height="20" fill="#2c3e50" class="chip-square"/>
+            <text x="170" y="190" font-family="Poppins, sans-serif" font-size="20" font-weight="600" fill="#2c3e50">**** **** **** 1234</text>
+            <text x="350" y="230" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#2c3e50">CashCred</text>
+          </svg>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">Como funciona o empréstimo no cartão de crédito?</h2>
+        <div class="steps-container">
+          <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.2s">
+            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="40" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
+              <path d="M30 40 L50 65 L70 30" fill="none" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h3>Sem Burocracia</h3>
+            <p>Para conseguir seu empréstimo, não é necessário ter nome limpo, apenas um cartão com limite disponível. 💳</p>
+          </div>
+          <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.4s">
+            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="40" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
+              <path d="M 30 50 Q 50 30, 70 50 L 70 50 Z" fill="#f1c40f" transform="rotate(180, 50, 50)"/>
+              <path d="M 30 50 Q 50 70, 70 50 L 70 50 Z" fill="#f1c40f"/>
+              <circle cx="50" cy="50" r="10" fill="#2c3e50"/>
+            </svg>
+            <h3>Limite Disponível</h3>
+            <p>Se você possui um cartão de crédito com limite disponível, é possível utilizar parte desse limite em forma de crédito contratado.</p>
+          </div>
+          <div class="step-card animate__animated animate__fadeInUp" data-animate-delay="0.6s">
+            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="30" width="60" height="40" rx="10" fill="#2c3e50" stroke="#f1c40f" stroke-width="4"/>
+              <path d="M50 30 L50 70 M35 50 L65 50" stroke="#f1c40f" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3>Atendimento Personalizado</h3>
+            <p>O valor liberado depende do limite disponível no cartão. Atendimento personalizado com um especialista. Sem taxa de adesão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Por que escolher a Cash Cred?</h2>
+        <div class="advantages-grid">
+          <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.2s">
+            <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <h4>Rápido</h4>
+            <p>O dinheiro cai na conta em poucos minutos.</p>
+          </div>
+          <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.4s">
+            <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <h4>Seguro</h4>
+            <p>Processo 100% seguro com garantia do seu cartão.</p>
+          </div>
+          <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.6s">
+            <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <h4>Sem Burocracia</h4>
+            <p>Não precisa ter nome limpo, só um cartão com limite.</p>
+          </div>
+          <div class="advantage-item animate__animated animate__fadeInLeft" data-animate-delay="0.8s">
+            <svg class="adv-icon" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 17H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-3H2"/>
+              <path d="M12 12V3h3a3 3 0 0 1 3 3v7.5a1.5 1.5 0 0 0 3 0V6a3 a3 0 0 0-3-3h-3a3 a3 0 0 0-3 3v6"/>
+              <path d="M12 21v-9"/>
+            </svg>
+            <h4>Atendimento Pessoal</h4>
+            <p>Um especialista vai até você para fechar o negócio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">O que nossos clientes dizem</h2>
+        <div class="swiper-container testimonial-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-card">
+              <p>"Precisava de dinheiro rápido e a Cash Cred resolveu meu problema em minutos! Atendimento nota 10."</p>
+              <span>- Maria S., Rio de Janeiro</span>
+            </div>
+            <div class="swiper-slide testimonial-card">
+              <p>"Tentei em vários lugares e só aqui consegui o empréstimo sem complicação. Recomendo muito!"</p>
+              <span>- João P., São Paulo</span>
+            </div>
+            <div class="swiper-slide testimonial-card">
+              <p>"O diferencial é a segurança e a agilidade. Fui atendida em casa e o dinheiro caiu na hora."</p>
+              <span>- Ana C., Belo Horizonte</span>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Perguntas Frequentes</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">O que preciso para solicitar o empréstimo?</div>
+            <div class="faq-answer">
+              <p>Apenas um cartão de crédito com limite disponível. Não consultamos SPC/Serasa.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Qual o valor mínimo e máximo que posso solicitar?</div>
+            <div class="faq-answer">
+              <p>O valor liberado depende do limite disponível no seu cartão. Nosso especialista fará a melhor análise para você.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">O processo é seguro?</div>
+            <div class="faq-answer">
+              <p>Sim, todas as transações são feitas de forma segura e com a sua autorização. Garantimos total sigilo dos seus dados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section cta-section text-center">
+      <div class="container">
+        <h2>Pronto para conseguir seu empréstimo?</h2>
+      <p>Entre em contato agora mesmo e transforme seu limite em dinheiro na hora.</p>
+      <a href="https://wa.me/558296284951" target="_blank" class="btn-main pulse-animation">Fale com um especialista</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 CashCred Empréstimos. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
