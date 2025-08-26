@@ -8,6 +8,7 @@
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -103,6 +104,7 @@ h2::after {
     100% { transform: scale(1); }
 }
 
+/* Header */
 .header {
     background: var(--bg-dark);
     padding: 20px 0;
@@ -172,6 +174,7 @@ h2::after {
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
+    z-index: 1002;
 }
 
 .menu-toggle .bar {
@@ -194,6 +197,7 @@ h2::after {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Hero Section */
 .hero-section {
     padding: 160px 0 80px;
     display: flex;
@@ -255,6 +259,7 @@ h2::after {
     50% { opacity: 1; }
 }
 
+/* Steps */
 .steps-container {
     display: flex;
     flex-wrap: wrap;
@@ -289,6 +294,7 @@ h2::after {
     font-size: 1.5rem;
 }
 
+/* Advantages */
 .advantages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -320,10 +326,12 @@ h2::after {
     font-size: 1.3rem;
 }
 
+/* Testimonials */
 .testimonial-slider {
     width: 100%;
     height: auto;
     padding: 40px 0;
+    overflow: hidden;
 }
 
 .testimonial-card {
@@ -353,6 +361,7 @@ h2::after {
     background: var(--secondary-color);
 }
 
+/* FAQ */
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
@@ -403,10 +412,11 @@ h2::after {
 }
 
 .faq-answer.open {
-    max-height: 200px;
+    max-height: 500px;
     padding: 20px;
 }
 
+/* CTA */
 .cta-section {
     background-color: var(--primary-color);
     padding: 60px 0;
@@ -426,6 +436,7 @@ h2::after {
     opacity: 0.9;
 }
 
+/* Footer */
 .footer {
     background-color: var(--primary-color);
     padding: 20px 0;
@@ -439,196 +450,7 @@ h2::after {
     opacity: 0.7;
 }
 
-@media (max-width: 992px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: var(--bg-dark);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        animation: slideDown 0.5s ease-out;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 15px 0;
-    }
-
-    .nav-links li a {
-        font-size: 1.2rem;
-    }
-
-    .btn-contact {
-        display: none;
-    }
-    
-    .header {
-        padding: 15px 0; 
-    }
-
-    .logo img {
-        height: 55px; 
-    }
-
-    .hero-section {
-        padding: 130px 20px 60px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text-and-button .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .hero-content-container {
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .section {
-        padding: 60px 20px;
-    }
-
-    .steps-container, .advantages-grid {
-        gap: 20px;
-    }
-
-    .header {
-        padding: 12px 20px;
-    }
-
-    .logo img {
-        height: 50px;
-    }
-
-    .hero-section {
-        padding: 110px 20px 50px;
-    }
-
-    .hero-text-and-button .subtitle {
-        font-size: 1rem;
-    }
-
-    .hero-card-svg {
-        max-width: 400px;
-        transform: rotate3d(1,1,0,15deg) scale(0.85);
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 10px 15px; 
-    }
-
-    .logo img {
-        height: 40px; 
-    }
-
-    h1 {
-        font-size: 1.8rem; 
-        line-height: 1.4;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    .section {
-        padding: 50px 15px;
-    }
-
-    .hero-section {
-        padding: 100px 15px 40px; 
-    }
-
-    .hero-content-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .hero-text-and-button {
-        text-align: center;
-        flex: unset;
-        width: 100%;
-    }
-
-    .hero-text-and-button .subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 20px;
-    }
-
-    .btn-main {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .hero-image-container {
-        flex: unset;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-card-svg {
-        max-width: 300px;
-        transform: rotate3d(1,1,0,10deg) scale(0.8);
-    }
-
-    .steps-container, .advantages-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .step-card, .advantage-item, .testimonial-card, .faq-item {
-        width: 100%;
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .cta-section {
-        padding: 40px 20px;
-    }
-
-    .nav-links.active {
-        top: 60px; 
-    }
-}
-
+/* Animations */
 .animate__animated {
     opacity: 0;
 }
@@ -652,3 +474,59 @@ h2::after {
 .visible.animate__delay-0_4s { animation-delay: 0.4s; }
 .visible.animate__delay-0_6s { animation-delay: 0.6s; }
 .visible.animate__delay-0_8s { animation-delay: 0.8s; }
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .menu-toggle { display: flex; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: var(--bg-dark);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.5s ease-out;
+        z-index: 1001;
+    }
+
+    .nav-links.active { display: flex; }
+    .nav-links li { padding: 15px 0; }
+    .nav-links li a { font-size: 1.2rem; }
+    .btn-contact { display: none; }
+    
+    .header { padding: 15px 0; }
+    .logo img { height: 55px; }
+    .hero-section { padding: 130px 0 60px; }
+    h1 { font-size: 2.5rem; }
+    .hero-text-and-button .subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+    .section { padding: 60px 0; }
+    .steps-container, .advantages-grid { gap: 20px; }
+    .header { padding: 12px 0; }
+    .logo img { height: 60px; }
+    .hero-section { padding: 110px 0 60px; }
+    .hero-text-and-button .subtitle { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .header { padding: 10px 0; }
+    .logo img { height: 40px; }
+    h1 { font-size: 1.8rem; line-height: 1.4; }
+    .hero-section { padding: 100px 0 50px; }
+    .btn-main { padding: 10px 20px; font-size: 0.9rem; }
+    .hero-text-and-button .subtitle { font-size: 0.9rem; margin-bottom: 20px; }
+    .nav-links.active { top: 60px; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
