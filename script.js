@@ -1,22 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
+
+    // --- LÓGICA DE ANIMAÇÃO CORRIGIDA ---
+    // Animações apenas para elementos que aparecem com a rolagem
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                const delay = entry.target.getAttribute('data-animate-delay');
+                const element = entry.target;
+                const animation = element.dataset.animation;
+                const delay = element.dataset.delay;
+
                 if (delay) {
-                    entry.target.style.animationDelay = delay;
+                    element.style.animationDelay = delay;
                 }
-                observer.unobserve(entry.target);
+                
+                // Adiciona as classes para iniciar a animação do Animate.css
+                element.classList.add('animate__animated', animation);
+
+                // Torna o elemento visível
+                element.style.opacity = 1;
+
+                // Para de observar o elemento para não animar de novo
+                scrollObserver.unobserve(element);
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.15
     });
 
-    const animatedElements = document.querySelectorAll('.animate__animated');
-    animatedElements.forEach(el => observer.observe(el));
+    // Observa apenas os elementos com a classe .js-scroll-animate
+    const elementsToAnimate = document.querySelectorAll('.js-scroll-animate');
+    elementsToAnimate.forEach(el => {
+        scrollObserver.observe(el);
+    });
+    // --- FIM DA LÓGICA DE ANIMAÇÃO ---
 
+
+    // Header fixo (sticky)
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -26,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const swiper = new Swiper('.swiper-container', {
+    // Swiper para Depoimentos
+    const swiper = new Swiper('.testimonial-slider', {
         loop: true,
         autoplay: {
             delay: 5000,
@@ -36,31 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.swiper-pagination',
             clickable: true,
         },
-        effect: 'slide',
+        grabCursor: true,
         spaceBetween: 30,
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
         },
     });
 
+    // Accordion para FAQ
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
+            const answerContainer = question.nextElementSibling;
             question.classList.toggle('active');
-            answer.classList.toggle('open');
+
+            if (question.classList.contains('active')) {
+                answerContainer.style.maxHeight = answerContainer.scrollHeight + 'px';
+            } else {
+                answerContainer.style.maxHeight = '0';
+            }
         });
     });
 
-    // Mobile Menu Toggle
+    // Menu Mobile
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -69,12 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when a link is clicked
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (navLinks.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         });
     });
 });
